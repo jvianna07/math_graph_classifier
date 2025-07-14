@@ -1,2 +1,6 @@
+.DS_Store
 fg_dataset.pkl
 /demo_imgs
+/dataset
+dataset.pkl.zip
+LID_fg_dataset.pkl
