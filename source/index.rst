@@ -10,6 +10,7 @@ Hello world
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Options
 
    Options/description
@@ -18,6 +19,7 @@ Hello world
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: References
 
    References/references
