@@ -28,7 +28,7 @@ git clone git@github.com:jvianna07/math_graph_classifier.git && cd math_graph_cl
 Crie o ambiente virtual e instale as dependências. Você pode criar o ambiente virtual e dar o nome a sua escolha. Para instalar as dependências execute:
 
 ```bash
-pip install -r requeriments.txt
+pip install -r requirements.txt
 ```
 
 ### Obter dataset
