@@ -6,7 +6,6 @@
 Math Graph Classifier documentation
 ===================================
 
-Hello world
 
 .. toctree::
    :maxdepth: 2
