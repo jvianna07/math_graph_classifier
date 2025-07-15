@@ -6,12 +6,19 @@
 Math Graph Classifier documentation
 ===================================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+Hello world
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Options
+
+   Options/description
+   Options/instalation
+   Options/usage
+
+.. toctree::
+   :maxdepth: 2
+   :caption: References
+
+   References/references
 

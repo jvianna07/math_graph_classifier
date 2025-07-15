@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este é um modelo de IA para classificação de imagens gráficos de funções matematemáticas elementares.
+Este é um modelo de IA para classificação de imagens gráficos de funções matemáticas elementares.
 O modelo classifica entre dez classes elementares:
 
 0. linear
@@ -21,7 +21,7 @@ O modelo classifica entre dez classes elementares:
 ### Clonar o repositório
 Clone o repositório na sua máquina:
 ```bash
-git clone git@github.com:jvianna07/math_graph_classifier.git && cd math_graph_classifier.git/
+git clone git@github.com:jvianna07/math_graph_classifier.git && cd math_graph_classifier/
 ```
 
 ### Criar ambiente virtual e instalar as dependências

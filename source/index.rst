@@ -16,3 +16,9 @@ Hello world
    Options/instalation
    Options/usage
 
+.. toctree::
+   :maxdepth: 2
+   :caption: References
+
+   References/references
+
