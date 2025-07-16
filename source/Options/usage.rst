@@ -83,7 +83,9 @@ Rode o notebook ``loadingModel.ipynb``. na seguinte ordem:
 
         print('É uma função ', classes[discover])
 
-.. image:: ../../demo_imgs/func0.png
+.. image:: images/func0.png
+    :alt: Imagem de uma funcao exponencial
+    :width: 400px
 
 
 >>> É uma função  exponencial

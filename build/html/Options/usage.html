@@ -79,9 +79,10 @@
              
   <section id="modo-de-uso">
 <h1>Modo de Uso<a class="headerlink" href="#modo-de-uso" title="Link to this heading"></a></h1>
-<p>Rode o notebook <code class="docutils literal notranslate"><span class="pre">loadingModel.ipynb</span></code>. na seguinte ordem</p>
-<p>#. Load packages
-Carregar as bibliotecas:</p>
+<p>Rode o notebook <code class="docutils literal notranslate"><span class="pre">loadingModel.ipynb</span></code>. na seguinte ordem:</p>
+<ol class="arabic">
+<li><dl>
+<dt><strong>Load packages</strong></dt><dd><p>Carregar as bibliotecas:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load libraries</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">keras.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_model</span> <span class="c1"># !pip install keras</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span> <span class="c1">#pip install matplotlib</span>
@@ -91,8 +92,11 @@ Carregar as bibliotecas:</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span> <span class="c1">#!pip install opencv</span>
 </pre></div>
 </div>
-<p>#. Load dataset
-Carregar o dataset:</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Load dataset</strong></dt><dd><p>Carregar o dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Dataset</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dataset/dataset.pkl&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -106,24 +110,31 @@ Carregar o dataset:</p>
 <span class="n">teste</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">image</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">teste</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>#. Load model
-Carregar o modelo:</p>
-<blockquote>
-<div><p># Load Dataset
-with open(‘dataset/dataset.pkl’,’rb’) as f:</p>
-<blockquote>
-<div><p>data = pickle.load(f)</p>
-</div></blockquote>
-<p>(xt,yt),(xv,yv),(teste,label) = data
-del xt
-del yt
-del xv
-del yv
-teste = teste.astype(‘uint8’)
-teste = np.array([image.reshape((128, 128, 3)) for image in teste])</p>
-</div></blockquote>
-<p>#. Make predictions with images from the dataset
-Fazer previsões com imagens do conjunto de teste do dataset:</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Load model</strong></dt><dd><p>Carregar o modelo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Dataset</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dataset/dataset.pkl&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">xt</span><span class="p">,</span><span class="n">yt</span><span class="p">),(</span><span class="n">xv</span><span class="p">,</span><span class="n">yv</span><span class="p">),(</span><span class="n">teste</span><span class="p">,</span><span class="n">label</span><span class="p">)</span> <span class="o">=</span> <span class="n">data</span>
+<span class="k">del</span> <span class="n">xt</span>
+<span class="k">del</span> <span class="n">yt</span>
+<span class="k">del</span> <span class="n">xv</span>
+<span class="k">del</span> <span class="n">yv</span>
+<span class="n">teste</span> <span class="o">=</span> <span class="n">teste</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+<span class="n">teste</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">image</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">teste</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic">
+<li><dl>
+<dt><strong>Make predictions with images from the dataset</strong></dt><dd><p>Fazer previsões com imagens do conjunto de teste do dataset</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualizar  as imagens</span>
 <span class="n">img_nr</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">teste</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -137,12 +148,17 @@ Fazer previsões com imagens do conjunto de teste do dataset:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resposta esperada:&#39;</span> <span class="p">,</span> <span class="n">classes</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">label</span><span class="p">[</span><span class="n">img_nr</span><span class="p">])])</span>
 </pre></div>
 </div>
+</dd>
+</dl>
+</li>
+</ol>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>Só rode esta célula caso tenha baixado o dataset através do comando <code class="docutils literal notranslate"><span class="pre">./setup.sh</span></code> na seção de <a class="reference internal" href="instalation.html"><span class="doc">Instalação</span></a>.</p>
 </div>
-<p>#. Make predictions with images from the internet
-Fazer previsões com imagens da internet e outras desenhadas manualmente:</p>
+<ol class="arabic" start="5">
+<li><dl>
+<dt><strong>Make predictions with images from the internet</strong></dt><dd><p>Fazer previsões com imagens da internet e outras desenhadas manualmente</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualizar  as imagens</span>
 <span class="n">img_url</span><span class="o">=</span> <span class="s2">&quot;demo_imgs/func0.png&quot;</span> <span class="c1"># substitua aqui o caminho correto para a imagem</span>
 <span class="n">imagem</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">img_url</span><span class="p">)</span>
@@ -158,7 +174,12 @@ Fazer previsões com imagens da internet e outras desenhadas manualmente:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;É uma função &#39;</span><span class="p">,</span> <span class="n">classes</span><span class="p">[</span><span class="n">discover</span><span class="p">])</span>
 </pre></div>
 </div>
-<img alt="../_images/func0.png" src="../_images/func0.png" />
+</dd>
+</dl>
+</li>
+</ol>
+<a class="reference internal image-reference" href="Options/images/func0.png"><img alt="Imagem de uma funcao exponencial" src="Options/images/func0.png" style="width: 400px;" />
+</a>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">É</span> <span class="n">uma</span> <span class="n">função</span>  <span class="n">exponencial</span>
 </pre></div>
 </div>

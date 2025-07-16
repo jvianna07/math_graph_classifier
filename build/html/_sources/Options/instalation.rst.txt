@@ -6,8 +6,8 @@ Clonar o repositório
 ======================
 
 Clone o repositório na sua máquina.
-Para clonar, execute o código::
-    git clone git@github.com:jvianna07/math_graph_classifier.git && cd math_graph_classifier.git/
+Para clonar, execute o código::    
+    git clone git@github.com:jvianna07/math_graph_classifier.git && cd math_graph_classifier/
 
 
 Criar ambiente virtual e instalar as dependências
