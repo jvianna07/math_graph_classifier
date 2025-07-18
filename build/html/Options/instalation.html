@@ -47,7 +47,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Instalação</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#clonar-o-repositorio">Clonar o repositório</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#criar-ambiente-virtual-e-instalar-as-dependencias">Criar ambiente virtual e instalar as dependências</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#obter-dataset">Obter dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obter-o-dataset-opcional">Obter o dataset (opcional)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Modo de Uso</a></li>
@@ -86,24 +86,39 @@
 <section id="clonar-o-repositorio">
 <h2>Clonar o repositório<a class="headerlink" href="#clonar-o-repositorio" title="Link to this heading"></a></h2>
 <p>Clone o repositório na sua máquina.
-Para clonar, execute o código:</p>
+Para clonar e entrar na pasta, execute o código:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">jvianna07</span><span class="o">/</span><span class="n">math_graph_classifier</span><span class="o">.</span><span class="n">git</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">math_graph_classifier</span><span class="o">/</span>
 </pre></div>
 </div>
 </section>
 <section id="criar-ambiente-virtual-e-instalar-as-dependencias">
 <h2>Criar ambiente virtual e instalar as dependências<a class="headerlink" href="#criar-ambiente-virtual-e-instalar-as-dependencias" title="Link to this heading"></a></h2>
-<p>Crie o ambiente virtual e instale as dependências. Você pode criar o ambiente virtual e dar o nome a sua escolha.
-Para instalar as dependências execute:</p>
+<p>Crie o ambiente virtual e instale as dependências.
+Você pode criar o ambiente virtual e dar o nome a sua escolha.
+No entanto, esta aplicação funciona com python 3.9 a 3.12 que é compatível com o tensorflow 2
+caso use <code class="docutils literal notranslate"><span class="pre">conda</span></code> use o comando <code class="docutils literal notranslate"><span class="pre">create</span></code> para criar o ambiente virtual.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">fgraphs</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.10</span>
+</pre></div>
+</div>
+<p>Este comando irá criar o ambiente virtual com o nome <code class="docutils literal notranslate"><span class="pre">fgraphs</span></code> e python 3.10.
+Para ativar use o comando <code class="docutils literal notranslate"><span class="pre">activate</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">fgraphs</span>
+</pre></div>
+</div>
+<p>Para instalar as dependências execute:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </section>
-<section id="obter-dataset">
-<h2>Obter dataset<a class="headerlink" href="#obter-dataset" title="Link to this heading"></a></h2>
+<section id="obter-o-dataset-opcional">
+<h2>Obter o dataset (opcional)<a class="headerlink" href="#obter-o-dataset-opcional" title="Link to this heading"></a></h2>
 <p>Após instalar, você pode baixar o dataset de teste para classificar.
 Para obter o dataset, execute:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">setup</span>
+</pre></div>
+</div>
+<p>Alternativamente pode usar o comando <code class="docutils literal notranslate"><span class="pre">source</span></code> para o mesmo fim.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">setup</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
 <p>Isto irá criar uma pasta com o nome dataset e um arquivo de dataset nela.</p>
